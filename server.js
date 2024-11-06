@@ -7,9 +7,15 @@ const port = 3030;
 
 
 // define a routes
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
+
+
 app.get("/bami", (req, res) => {
   res.sendFile(__dirname + "/bami.html");
 });
+
 
 // listening on port 3030
 app.listen(port, () => {
